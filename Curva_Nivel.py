@@ -11,3 +11,6 @@ X, Y = np.meshgrid(x, y)
 # 3. Definir a função z = f(x, y)
 # Exemplo: z = sin(sqrt(x^2 + y^2))
 Z = np.sin(np.sqrt(X**2 + Y**2))
+
+# 4. Criar a figura
+plt.figure(figsize=(8, 6))
