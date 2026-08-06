@@ -2,6 +2,6 @@
 #include <cmath>
 #include <vector>
 
-int main{
-    
+int main() {
+
 }
