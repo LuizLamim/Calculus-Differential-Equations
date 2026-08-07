@@ -22,3 +22,16 @@ V_norm = V / magnitude
 # 3. Plotar o campo vetorial
 plt.figure(figsize=(8, 8))
 plt.quiver(X, Y, U_norm, V_norm, magnitude, cmap='Blues', pivot='mid', scale=25)
+
+# 4. Configurações estéticas do gráfico
+plt.title('Campo Vetorial Convergente', fontsize=14)
+plt.xlabel('Eixo X')
+plt.ylabel('Eixo Y')
+plt.axhline(0, color='gray', linestyle='--', linewidth=0.8)
+plt.axvline(0, color='gray', linestyle='--', linewidth=0.8)
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.colorbar(label='Intensidade Relativa')
+plt.xlim(-6, 6)
+plt.ylim(-6, 6)
+
+plt.show()
