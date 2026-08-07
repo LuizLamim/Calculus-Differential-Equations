@@ -10,3 +10,11 @@ X, Y = np.meshgrid(x, y)
 # Para convergir para a origem, as componentes devem ser proporcionais a -X e -Y
 U = -X
 V = -Y
+
+# Opcional: Normalizar os vetores para que todos tenham o mesmo comprimento 
+# (deixando a visualização da direção mais limpa)
+magnitude = np.sqrt(U**2 + V**2)
+# Evita divisão por zero no centro
+magnitude[magnitude == 0] = 1 
+U_norm = U / magnitude
+V_norm = V / magnitude
