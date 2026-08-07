@@ -18,3 +18,7 @@ magnitude = np.sqrt(U**2 + V**2)
 magnitude[magnitude == 0] = 1 
 U_norm = U / magnitude
 V_norm = V / magnitude
+
+# 3. Plotar o campo vetorial
+plt.figure(figsize=(8, 8))
+plt.quiver(X, Y, U_norm, V_norm, magnitude, cmap='Blues', pivot='mid', scale=25)
