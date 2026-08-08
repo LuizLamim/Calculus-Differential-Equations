@@ -17,3 +17,13 @@ M = np.hypot(U, V)
 
 # 4. Configurando e plotando o gráfico
 plt.figure(figsize=(8, 8))
+
+# A função quiver é a responsável por desenhar o campo de vetores (setas)
+# Passamos X, Y (posições), U, V (direções) e M (cores baseadas na magnitude)
+plt.quiver(X, Y, U, V, M, cmap='viridis', pivot='mid')
+
+# Adicionando detalhes ao gráfico
+plt.title('Campo Vetorial Rotacional\n$\mathbf{V}(x,y) = -y\hat{i} + x\hat{j}$')
+plt.xlabel('Eixo X')
+plt.ylabel('Eixo Y')
+plt.grid(True, linestyle='--', alpha=0.6)
