@@ -13,7 +13,7 @@ V = X   # Componente Y do vetor
 
 # 3. Calculando a magnitude (tamanho) dos vetores para colorí-los
 # np.hypot calcula a hipotenusa (sqrt(U**2 + V**2))
-M = np.hypot(U, V)
+M = np.hypot(U, V) 
 
 # 4. Configurando e plotando o gráfico
 plt.figure(figsize=(8, 8))
@@ -27,3 +27,9 @@ plt.title('Campo Vetorial Rotacional\n$\mathbf{V}(x,y) = -y\hat{i} + x\hat{j}$')
 plt.xlabel('Eixo X')
 plt.ylabel('Eixo Y')
 plt.grid(True, linestyle='--', alpha=0.6)
+
+# axis('equal') garante que os círculos não fiquem distorcidos (elipses)
+plt.axis('equal') 
+
+# Exibindo o resultado
+plt.show()
