@@ -10,3 +10,7 @@ X, Y = np.meshgrid(x, y)   # Cria uma malha 2D com esses pontos
 # V(x, y) = -y*i + x*j
 U = -Y  # Componente X do vetor
 V = X   # Componente Y do vetor
+
+# 3. Calculando a magnitude (tamanho) dos vetores para colorí-los
+# np.hypot calcula a hipotenusa (sqrt(U**2 + V**2))
+M = np.hypot(U, V)
