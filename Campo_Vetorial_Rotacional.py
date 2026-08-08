@@ -14,3 +14,6 @@ V = X   # Componente Y do vetor
 # 3. Calculando a magnitude (tamanho) dos vetores para colorí-los
 # np.hypot calcula a hipotenusa (sqrt(U**2 + V**2))
 M = np.hypot(U, V)
+
+# 4. Configurando e plotando o gráfico
+plt.figure(figsize=(8, 8))
