@@ -6,5 +6,8 @@
 #define PI 3.14159265358979323846
 
 int main(){
+    double x;
+    double passo = 0.15;        // O incremento de X a cada linha
+    double max_x = 2 * PI;      // Vai plotar um ciclo completo de 0 a 2π
     return 0;
 }
