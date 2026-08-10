@@ -16,3 +16,34 @@ dF_dy, dF_dx = np.gradient(Z, y[1] - y[0], x[1] - x[0])
 
 # 4. Configurar a figura
 plt.figure(figsize=(8, 6))
+
+# Plotar as curvas de nível da função f(x, y)
+contornos = plt.contour(X, Y, Z, levels=15, cmap="viridis", alpha=0.6)
+plt.clabel(contornos, inline=True, fontsize=8)
+
+# Plotar os vetores gradiente usando plt.quiver
+plt.quiver(
+    X,
+    Y,
+    dF_dx,
+    dF_dy,
+    color="crimson",
+    angles="xy",
+    scale_units="xy",
+    scale=12,
+    headwidth=3.5,
+)
+
+# Detalhes visuais do gráfico
+plt.title(
+    r"Campo de Vetores Gradiente de $f(x, y) = x^2 + y^2$", fontsize=12, pad=12
+)
+plt.xlabel("Eixo X")
+plt.ylabel("Eixo Y")
+plt.axhline(0, color="gray", linewidth=0.8, linestyle="--")
+plt.axvline(0, color="gray", linewidth=0.8, linestyle="--")
+plt.grid(True, linestyle=":", alpha=0.5)
+plt.axis("equal")
+
+# Exibir o gráfico
+plt.show()
