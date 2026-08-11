@@ -8,3 +8,6 @@ def f(x):
     return x**2 + 1
 
 a, b = 0, 2  # Intervalo [a, b]
+
+# 2. Configuração da figura e dos eixos
+fig, ax = plt.subplots(figsize=(9, 6))
