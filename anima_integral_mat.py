@@ -11,3 +11,7 @@ a, b = 0, 2  # Intervalo [a, b]
 
 # 2. Configuração da figura e dos eixos
 fig, ax = plt.subplots(figsize=(9, 6))
+
+# Pontos contínuos para desenhar a curva suave
+x_curve = np.linspace(a - 0.2, b + 0.2, 400)
+y_curve = f(x_curve)
