@@ -6,3 +6,7 @@ x = np.linspace(-3, 3, 500)
 
 # 2. Calcula os valores da função f(x) = e^x + sin(x)
 y = np.exp(x) + np.sin(x)
+
+# 3. Configura o gráfico
+plt.figure(figsize=(8, 5))
+plt.plot(x, y, label=r'$f(x) = e^x + \sin(x)$', color='purple', linewidth=2)
