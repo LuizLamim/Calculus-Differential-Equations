@@ -17,3 +17,9 @@ y = k + b * np.sin(t)
 plt.figure(figsize=(8, 6))
 plt.plot(x, y, label=f'Elipse: a={a}, b={b}', color='blue', linewidth=2)
 plt.plot(h, k, 'ro', label='Centro (0,0)')  # Plota o ponto do centro
+
+# Ajustes dos eixos e visualização
+plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+plt.axvline(0, color='black', linewidth=0.8, linestyle='--')
+plt.gca().set_aspect('equal', adjustable='box')  # Mantém as proporções corretas
+plt.grid(True, linestyle=':', alpha=0.6)
