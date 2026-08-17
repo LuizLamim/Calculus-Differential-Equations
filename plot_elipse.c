@@ -5,5 +5,5 @@
 #define ALTURA 30
 
 int main{
-    
+    return 0;
 }
