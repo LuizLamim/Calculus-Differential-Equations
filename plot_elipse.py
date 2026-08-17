@@ -4,7 +4,7 @@ import numpy as np
 # Parâmetros da elipse
 h, k = 0, 0  # Centro da elipse (h, k)
 a = 18        # Semieixo maior (horizontal)
-b = 7        # Semieixo menor (vertical)
+b = 2        # Semieixo menor (vertical)
 
 # Ângulo t variando de 0 a 2π
 t = np.linspace(0, 2 * np.pi, 500)
