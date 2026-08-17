@@ -3,8 +3,8 @@ import numpy as np
 
 # Parâmetros da elipse
 h, k = 0, 0  # Centro da elipse (h, k)
-a = 149.597.871        # Semieixo maior (horizontal)
-b = 149.576.987        # Semieixo menor (vertical)
+a = 149.597        # Semieixo maior (horizontal)
+b = 149.576        # Semieixo menor (vertical)
 
 # Ângulo t variando de 0 a 2π
 t = np.linspace(0, 2 * np.pi, 500)
