@@ -3,3 +3,7 @@
 
 #define LARGURA 60
 #define ALTURA 30
+
+int main{
+    
+}
