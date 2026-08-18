@@ -14,3 +14,6 @@ Z = X**2 + Y**2
 # O gradiente analítico de x^2 + y^2 é (2x, 2y)
 # Também podemos usar np.gradient para calcular numericamente:
 U, V = np.gradient(Z, x[1] - x[0], y[1] - y[0])
+
+# 4. Configurar a figura
+fig, ax = plt.subplots(figsize=(8, 7))
