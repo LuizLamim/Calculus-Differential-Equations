@@ -7,3 +7,6 @@ x = np.linspace(-3, 3, 400)
 # 2. Calcula a função f(x) = |e^x|
 # np.exp(x) calcula e^x, e np.abs() aplica o valor absoluto
 y = np.abs(np.exp(x))
+
+# 3. Cria a figura e define o tamanho
+plt.figure(figsize=(8, 6))
