@@ -5,14 +5,14 @@
 
 int main() {
     char grade[ALTURA][LARGURA];
-
+    
     // 1. Inicializa a grade com espaços em branco
     for (int i = 0; i < ALTURA; i++) {
         for (int j = 0; j < LARGURA; j++) {
             grade[i][j] = ' ';
         }
     }
-
+    
     // 2. Define o intervalo do eixo X
     double x_min = -15.0;
     double x_max = 15.0;
@@ -38,4 +38,19 @@ int main() {
             grade[i][j] = '*';
         }
     }
+    
+    // 4. Imprime o resultado final
+    printf("\n  Gráfico de f(x) = x^2 + 458\n");
+    printf("  ------------------------------------------------------------\n");
+    for (int i = 0; i < ALTURA; i++) {
+        printf(" |");
+        for (int j = 0; j < LARGURA; j++) {
+            putchar(grade[i][j]);
+        }
+        printf("|\n");
+    }
+    printf("  ------------------------------------------------------------\n");
+    printf("   Eixo X: %.1f a %.1f  |  Eixo Y: %.1f a %.1f\n\n", x_min, x_max, y_min, y_max);
+    
+    return 0;
 }
