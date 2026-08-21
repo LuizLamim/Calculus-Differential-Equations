@@ -10,3 +10,6 @@ y = np.abs(np.exp(x))
 
 # 3. Cria a figura e define o tamanho
 plt.figure(figsize=(8, 6))
+
+# 4. Plota o gráfico com uma linha azul
+plt.plot(x, y, color='blue', linewidth=2, label=r'$f(x) = |e^x|$')
