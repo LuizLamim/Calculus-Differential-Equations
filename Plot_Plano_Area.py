@@ -16,3 +16,6 @@ Z = 2*X + 3*Y - 5
 # 4. Plota a superfície do plano
 # O parâmetro 'alpha' controla a transparência e 'cmap' a paleta de cores
 plano = ax.plot_surface(X, Y, Z, alpha=0.8, cmap='viridis', edgecolor='k', linewidth=0.1)
+
+# Adiciona uma barra de cores para referência visual
+fig.colorbar(plano, ax=ax, shrink=0.5, aspect=10, label='Valor de Z')
