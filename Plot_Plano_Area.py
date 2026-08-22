@@ -25,3 +25,6 @@ ax.set_xlabel('Eixo X')
 ax.set_ylabel('Eixo Y')
 ax.set_zlabel('Eixo Z')
 ax.set_title('Plano: 2x + 3y - z = 5')
+
+# 6. Exibe o gráfico interativo
+plt.show()
