@@ -9,3 +9,6 @@ ax = fig.add_subplot(111, projection='3d')
 x = np.linspace(-10, 10, 20)
 y = np.linspace(-10, 10, 20)
 X, Y = np.meshgrid(x, y)
+
+# 3. Define a equação do plano: z = 2x + 3y - 5
+Z = 2*X + 3*Y - 5
