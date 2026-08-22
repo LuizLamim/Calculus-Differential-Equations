@@ -19,3 +19,9 @@ plano = ax.plot_surface(X, Y, Z, alpha=0.8, cmap='viridis', edgecolor='k', linew
 
 # Adiciona uma barra de cores para referência visual
 fig.colorbar(plano, ax=ax, shrink=0.5, aspect=10, label='Valor de Z')
+
+# 5. Configura os rótulos e o título
+ax.set_xlabel('Eixo X')
+ax.set_ylabel('Eixo Y')
+ax.set_zlabel('Eixo Z')
+ax.set_title('Plano: 2x + 3y - z = 5')
