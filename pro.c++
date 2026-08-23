@@ -8,5 +8,7 @@ const double c = 299792458.0;      // Velocidade da luz em m/s
 const double mass_sun = 1.989e30;  // Massa do sol em kg
 
 int main() {
-    double solar_masses;
+    double solar_masses;]
+
+    return 0;
 }
