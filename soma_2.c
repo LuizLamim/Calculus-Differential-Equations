@@ -10,3 +10,9 @@ int main()
 
     printf("Digite o segundo número: ");
     scanf("%f", &num2);
+
+    // Cálculo da soma
+    soma = num1 + num2;
+
+    // Exibição do resultado
+    printf("A soma entre %.2f e %.2f é: %.2f\n", num1, num2, soma);
