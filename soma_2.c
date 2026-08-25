@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-
+int main() {
     float num1, num2, soma;
 
     // Leitura dos dados de entrada
@@ -16,3 +15,6 @@ int main()
 
     // Exibição do resultado
     printf("A soma entre %.2f e %.2f é: %.2f\n", num1, num2, soma);
+
+    return 0;
+}
