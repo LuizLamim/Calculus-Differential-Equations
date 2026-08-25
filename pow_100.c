@@ -4,4 +4,6 @@
 int main(){
     double base, resultado;
 
+    return 0;
+
 }
