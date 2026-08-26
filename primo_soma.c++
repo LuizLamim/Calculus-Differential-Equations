@@ -9,7 +9,7 @@ bool ehPrimo(int n) {
     return true;
 }
 
-int main(){
+int main() {
     const int TOTAL_PRIMOS = 10;
     int contador = 0;
     int numero = 2;
@@ -28,4 +28,5 @@ int main(){
 
     std::cout << "Soma dos primeiros 10 primos: " << soma << std::endl;
 
+    return 0;
 }
