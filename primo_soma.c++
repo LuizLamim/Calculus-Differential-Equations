@@ -8,3 +8,5 @@ bool ehPrimo(int n) {
     }
     return true;
 }
+
+int main()
