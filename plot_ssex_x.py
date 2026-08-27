@@ -9,3 +9,9 @@ y = np.abs(1 / np.cos(x))
 
 # Removendo descontinuidades (assíntotas) para não desenhar linhas verticais falsas
 y[y > 10] = np.nan
+
+# Configurando o tamanho da figura
+plt.figure(figsize=(10, 6))
+
+# Plotando a função |sec(x)|
+plt.plot(x, y, label=r'$y = |\sec(x)|$', color='crimson', linewidth=2)
