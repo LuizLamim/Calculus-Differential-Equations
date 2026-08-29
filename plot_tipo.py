@@ -28,3 +28,8 @@ plt.xlabel('Categorias')
 plt.ylabel('Unidades Vendidas')
 plt.tight_layout()
 plt.show()
+
+# 3. Gráfico de Dispersão (Scatter Plot)
+np.random.seed(42)
+dados_x = np.random.randn(50)
+dados_y = np.random.randn(50)
