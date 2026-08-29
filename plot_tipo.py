@@ -16,3 +16,7 @@ plt.ylabel('Eixo Y')
 plt.legend()
 plt.tight_layout()
 plt.show()
+
+# 2. Gráfico de Barras (Comparação de Categoria)
+categorias = ['Produto A', 'Produto B', 'Produto C', 'Produto D']
+vendas = [120, 85, 140, 95]
