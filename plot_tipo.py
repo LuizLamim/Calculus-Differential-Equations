@@ -20,3 +20,11 @@ plt.show()
 # 2. Gráfico de Barras (Comparação de Categoria)
 categorias = ['Produto A', 'Produto B', 'Produto C', 'Produto D']
 vendas = [120, 85, 140, 95]
+
+plt.figure(figsize=(8, 4))
+plt.bar(categorias, vendas, color='skyblue', edgecolor='navy')
+plt.title('Vendas por Categoria')
+plt.xlabel('Categorias')
+plt.ylabel('Unidades Vendidas')
+plt.tight_layout()
+plt.show()
