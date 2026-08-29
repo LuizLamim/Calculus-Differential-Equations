@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main() {
     float x1, y1, x2, y2, distancia;
 
     // Entrada dos dados do primeiro ponto
@@ -18,4 +18,6 @@ int main(){
     // Exibicao do resultado com 2 casas decimais
     printf("\nA distancia entre os pontos (%.2f, %.2f) e (%.2f, %.2f) e: %.2f\n", 
             x1, y1, x2, y2, distancia);
+
+    return 0;
 }
