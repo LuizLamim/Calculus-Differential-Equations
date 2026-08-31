@@ -5,3 +5,8 @@ import numpy as np
 x = np.linspace(-5, 5, 15)
 y = np.linspace(-5, 5, 15)
 X, Y = np.meshgrid(x, y)
+
+# 2. Definição das componentes do campo vetorial convergente
+# As componentes negativas apontam em direção à origem (0, 0)
+U = -X
+V = -Y
