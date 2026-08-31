@@ -13,3 +13,6 @@ V = -Y
 
 # 3. Criação do gráfico
 plt.figure(figsize=(8, 8))
+
+# O 'quiver' plota os vetores. Normalizamos o tamanho para melhor visualização.
+plt.quiver(X, Y, U, V, color="crimson", angles="xy", scale_units="xy", scale=2.5)
