@@ -10,3 +10,6 @@ X, Y = np.meshgrid(x, y)
 # As componentes negativas apontam em direção à origem (0, 0)
 U = -X
 V = -Y
+
+# 3. Criação do gráfico
+plt.figure(figsize=(8, 8))
