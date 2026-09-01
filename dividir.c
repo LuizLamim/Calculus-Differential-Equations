@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(){
+int main() {
     double num1, num2, resultado;
 
     // Entrada dos números
@@ -17,4 +17,6 @@ int main(){
         resultado = num1 / num2;
         printf("O resultado de %.2lf / %.2lf é: %.2lf\n", num1, num2, resultado);
     }
+
+    return 0;
 }
