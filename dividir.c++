@@ -1,10 +1,10 @@
 #include <iostream>
 #include <iomanip> // Necessário para formatar as casas decimais
 
-int main(){
+int main() {
     double num1, num2, resultado;
 
-    / Entrada dos números usando std::cin
+    // Entrada dos números usando std::cin
     std::cout << "Digite o primeiro número (dividendo): ";
     std::cin >> num1;
 
@@ -22,4 +22,5 @@ int main(){
         std::cout << "O resultado de " << num1 << " / " << num2 << " é: " << resultado << "\n";
     }
 
+    return 0;
 }
