@@ -10,3 +10,7 @@ y_linear = 2 * x
 
 # 3. Configurando a figura do gráfico
 plt.figure(figsize=(8, 6))
+
+# Plotando as duas funções
+plt.plot(x, y_quadratica, label="y = x²", color="blue", linewidth=2)
+plt.plot(x, y_linear, label="y = 2x", color="red", linewidth=2)
