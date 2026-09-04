@@ -19,3 +19,8 @@ plt.plot(x, y_linear, label="y = 2x", color="red", linewidth=2)
 plt.title("Gráfico das funções y = x² e y = 2x", fontsize=14)
 plt.xlabel("Eixo X", fontsize=12)
 plt.ylabel("Eixo Y", fontsize=12)
+
+# Adicionando linhas de eixo (X=0 e Y=0) e grade
+plt.axhline(0, color="black", linewidth=0.8, linestyle="--")
+plt.axvline(0, color="black", linewidth=0.8, linestyle="--")
+plt.grid(True, linestyle=":", alpha=0.6)
