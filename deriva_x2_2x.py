@@ -7,3 +7,6 @@ x = np.linspace(-10, 10, 400)
 # 2. Definindo as funções
 y_quadratica = x**2
 y_linear = 2 * x
+
+# 3. Configurando a figura do gráfico
+plt.figure(figsize=(8, 6))
