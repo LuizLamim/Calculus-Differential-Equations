@@ -24,3 +24,9 @@ plt.ylabel("Eixo Y", fontsize=12)
 plt.axhline(0, color="black", linewidth=0.8, linestyle="--")
 plt.axvline(0, color="black", linewidth=0.8, linestyle="--")
 plt.grid(True, linestyle=":", alpha=0.6)
+
+# Mostrando a legenda
+plt.legend(fontsize=12)
+
+# 5. Exibindo o gráfico
+plt.show()
