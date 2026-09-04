@@ -14,3 +14,8 @@ plt.figure(figsize=(8, 6))
 # Plotando as duas funções
 plt.plot(x, y_quadratica, label="y = x²", color="blue", linewidth=2)
 plt.plot(x, y_linear, label="y = 2x", color="red", linewidth=2)
+
+# 4. Adicionando personalizações para melhorar a visualização
+plt.title("Gráfico das funções y = x² e y = 2x", fontsize=14)
+plt.xlabel("Eixo X", fontsize=12)
+plt.ylabel("Eixo Y", fontsize=12)
