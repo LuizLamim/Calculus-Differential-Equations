@@ -38,3 +38,16 @@ rede_neural = MLPClassifier(hidden_layer_sizes=(8, 4), max_iter=2000, random_sta
 rede_neural.fit(X_treino, y_treino)
 
 print("Treinamento concluído!\n")
+
+# 3. TESTANDO A REDE NEURAL
+def testar_cor(r, g, b):
+    # Normaliza a cor recebida
+    cor_normalizada = np.array([[r, g, b]]) / 255.0
+    
+    # A rede faz a previsão
+    previsao = rede_neural.predict(cor_normalizada)
+    
+    # Traduz a previsão (0 ou 1) para texto
+    cor_texto = "PRETO" if previsao[0] == 0 else "BRANCO"
+    
+    print(f"Fundo RGB({r}, {g}, {b}) -> A rede escolheu texto: {cor_texto}")
