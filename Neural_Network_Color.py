@@ -10,7 +10,7 @@ def gerar_dados_treino(quantidade):
     # Gera 'quantidade' de cores RGB (valores de 0 a 255)
     X = np.random.randint(0, 256, size=(quantidade, 3))
     y = []
-
+    
     for r, g, b in X:
         # Fórmula de luminância (como o olho humano percebe o brilho)
         luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255.0
@@ -51,3 +51,12 @@ def testar_cor(r, g, b):
     cor_texto = "PRETO" if previsao[0] == 0 else "BRANCO"
     
     print(f"Fundo RGB({r}, {g}, {b}) -> A rede escolheu texto: {cor_texto}")
+
+# Vamos testar com algumas cores específicas:
+print("--- TESTES ---")
+testar_cor(0, 0, 0)         # Preto puro (Deveria ser Branco)
+testar_cor(255, 255, 255)   # Branco puro (Deveria ser Preto)
+testar_cor(255, 0, 0)       # Vermelho puro (Deveria ser Branco)
+testar_cor(255, 255, 0)     # Amarelo puro (Deveria ser Preto)
+testar_cor(0, 50, 100)      # Azul marinho escuro (Deveria ser Branco)
+testar_cor(200, 230, 255)   # Azul bebê bem claro (Deveria ser Preto)
