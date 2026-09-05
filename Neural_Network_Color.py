@@ -21,3 +21,5 @@ def gerar_dados_treino(quantidade):
             y.append(1) # Fundo escuro -> Texto Branco
             
     return X, np.array(y)
+
+print("Gerando dados e treinando a Rede Neural...")
