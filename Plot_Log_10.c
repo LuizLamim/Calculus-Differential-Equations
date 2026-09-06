@@ -35,5 +35,16 @@ int main() {
         }
     }
 
+    // Exibe o gráfico no terminal com o eixo Y
+    printf("=== Grafico da Funcao Log10(x) ===\n\n");
+    for (int i = 0; i < HEIGHT; i++) {
+        double y_val = y_max - (i / (double)(HEIGHT - 1)) * (y_max - y_min);
+        printf("%4.1f |", y_val);
+        for (int j = 0; j < WIDTH; j++) {
+            putchar(grid[i][j]);
+        }
+        putchar('\n');
+    }
+
     return 0;
 }
