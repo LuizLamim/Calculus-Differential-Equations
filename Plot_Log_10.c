@@ -6,7 +6,7 @@
 
 int main() {
     char grid[HEIGHT][WIDTH];
-
+    
     // Inicializa a matriz do gráfico com espaços em branco
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
@@ -45,6 +45,20 @@ int main() {
         }
         putchar('\n');
     }
+
+    // Desenha a linha do eixo X
+    printf("     +");
+    for (int j = 0; j < WIDTH; j++) {
+        putchar('-');
+    }
+    printf("\n      ");
+    
+    // Mostra os valores inicial e final do eixo X
+    printf("%.0f", x_min);
+    for (int j = 0; j < WIDTH - 12; j++) {
+        putchar(' ');
+    }
+    printf("%.0f\n", x_max);
 
     return 0;
 }
