@@ -5,6 +5,7 @@
 #define HEIGHT 20  // Altura do gráfico (eixo Y)
 
 int main() {
+    char grid[HEIGHT][WIDTH];
 
     return 0;
 }
