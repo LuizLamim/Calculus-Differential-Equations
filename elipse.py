@@ -8,3 +8,4 @@ config.frame_width = 9
 config.frame_height = 16
 
 class PropriedadeFocal(Scene):
+    def construct(self):
