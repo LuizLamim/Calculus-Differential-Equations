@@ -3,4 +3,6 @@
 
 int main(){
     double base, expoente, resultado;
+
+    return 0;
 }
