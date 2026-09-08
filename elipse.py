@@ -38,8 +38,8 @@ class PropriedadeFocal(Scene):
         animacoes = []
         
         # Velocidade constante para todas as bolas
-        velocidade = 4.0
-
+        velocidade = 4.0 
+        
         for theta in angles:
             # Ponto na elipse onde a bola vai bater
             # Como a elipse é vertical, x = a*cos(theta), y = b*sin(theta)
@@ -67,3 +67,12 @@ class PropriedadeFocal(Scene):
             movimento2 = bola.animate(run_time=t2, rate_func=linear).move_to(F2_pos)
             
             animacoes.append(Succession(movimento1, movimento2))
+
+        # Adicionar os rastros à cena antes de animar
+        self.add(rastros)
+        
+        # Tocar todas as animações simultaneamente
+        # Como D1 + D2 = constante (2b) para qualquer ponto da elipse,
+        # todas as bolas chegarão em F2 exatamente no mesmo instante!
+        self.play(*animacoes)
+        self.wait(2)
