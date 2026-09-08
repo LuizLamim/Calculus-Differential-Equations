@@ -39,3 +39,31 @@ class PropriedadeFocal(Scene):
         
         # Velocidade constante para todas as bolas
         velocidade = 4.0
+
+        for theta in angles:
+            # Ponto na elipse onde a bola vai bater
+            # Como a elipse é vertical, x = a*cos(theta), y = b*sin(theta)
+            P = np.array([a * np.cos(theta), b * np.sin(theta), 0])
+            
+            # Distâncias D1 (F1 -> P) e D2 (P -> F2)
+            d1 = np.linalg.norm(P - F1_pos)
+            d2 = np.linalg.norm(P - F2_pos)
+            
+            # Criar bola
+            bola = Dot(F1_pos, color=RED, radius=0.08)
+            bolas.add(bola)
+            
+            # Criar rastro (trail)
+            rastro = TracedPath(bola.get_center, stroke_width=2, stroke_color=WHITE, stroke_opacity=0.6)
+            rastros.add(rastro)
+            
+            # Tempos de viagem (t = d / v)
+            t1 = d1 / velocidade
+            t2 = d2 / velocidade
+            
+            # Animações de movimento
+            # O Succession cria a sequência: vai de F1 para P, depois reflete de P para F2
+            movimento1 = bola.animate(run_time=t1, rate_func=linear).move_to(P)
+            movimento2 = bola.animate(run_time=t2, rate_func=linear).move_to(F2_pos)
+            
+            animacoes.append(Succession(movimento1, movimento2))
