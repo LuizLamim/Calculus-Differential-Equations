@@ -91,3 +91,26 @@ def simular_navier_stokes():
         v[-1, :] = 0
         v[:, 0] = 0
         v[:, -1] = 0
+
+    # 5. Plotagem dos Resultados
+     magnitude_velocidade = np.sqrt(u**2 + v**2)
+    
+    plt.figure(figsize=(8, 6), dpi=100)
+    
+    # Campo de magnitudes (fundo colorido)
+    plt.contourf(X, Y, magnitude_velocidade, alpha=0.8, cmap='viridis')
+    plt.colorbar(label='Magnitude da Velocidade')
+    
+    # Linhas de corrente com vetores
+    plt.streamplot(X, Y, u, v, color='white', density=1.2, linewidth=1)
+    
+    plt.title('Campo de Velocidade - Navier-Stokes 2D (Vórtice)')
+    plt.xlabel('Eixo X')
+    plt.ylabel('Eixo Y')
+    plt.xlim(0, lx)
+    plt.ylim(0, ly)
+    plt.show()
+
+# Executa o programa
+if __name__ == '__main__':
+    simular_navier_stokes()
