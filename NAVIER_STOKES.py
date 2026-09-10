@@ -93,7 +93,7 @@ def simular_navier_stokes():
         v[:, -1] = 0
 
     # 5. Plotagem dos Resultados
-     magnitude_velocidade = np.sqrt(u**2 + v**2)
+    magnitude_velocidade = np.sqrt(u**2 + v**2)
     
     plt.figure(figsize=(8, 6), dpi=100)
     
