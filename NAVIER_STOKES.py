@@ -41,3 +41,20 @@ def simular_navier_stokes():
                              (v[1:-1, 2:] - v[1:-1, 0:-2]) / (2 * dx)) -
                         ((v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy))**2))
         return b
+
+    # 3. Solver da Equação de Poisson para a Pressão
+    def poisson_pressao(p, dx, dy, b):
+        pn = np.empty_like(p)
+        for _ in range(nit):
+            pn = p.copy()
+            p[1:-1, 1:-1] = (((pn[1:-1, 2:] + pn[1:-1, 0:-2]) * dy**2 +
+                              (pn[2:, 1:-1] + pn[0:-2, 1:-1]) * dx**2) /
+                             (2 * (dx**2 + dy**2)) -
+                             dx**2 * dy**2 / (2 * (dx**2 + dy**2)) * b[1:-1, 1:-1])
+
+            # Condições de contorno para pressão (Dirichlet/Neumann)
+            p[:, -1] = p[:, -2]  # dp/dx = 0 em x = 2
+            p[0, :] = p[1, :]    # dp/dy = 0 em y = 0
+            p[:, 0] = p[:, 1]    # dp/dx = 0 em x = 0
+            p[-1, :] = 0         # p = 0 em y = 2
+        return p
