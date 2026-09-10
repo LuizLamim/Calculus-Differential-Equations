@@ -58,3 +58,36 @@ def simular_navier_stokes():
             p[:, 0] = p[:, 1]    # dp/dx = 0 em x = 0
             p[-1, :] = 0         # p = 0 em y = 2
         return p
+
+    # 4. Loop Principal de Avanço no Tempo
+    for n in range(nt):
+        un = u.copy()
+        vn = v.copy()
+        
+        b = construir_termo_b(b, rho, dt, u, v, dx, dy)
+        p = poisson_pressao(p, dx, dy, b)
+        
+        # Atualização das velocidades (Advecção + Gradiente de Pressão + Difusão Viscosa)
+        u[1:-1, 1:-1] = (un[1:-1, 1:-1] -
+                         un[1:-1, 1:-1] * dt / dx * (un[1:-1, 1:-1] - un[1:-1, 0:-2]) -
+                         vn[1:-1, 1:-1] * dt / dy * (un[1:-1, 1:-1] - un[0:-2, 1:-1]) -
+                         dt / (2 * rho * dx) * (p[1:-1, 2:] - p[1:-1, 0:-2]) +
+                         nu * (dt / dx**2 * (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+                               dt / dy**2 * (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+
+        v[1:-1, 1:-1] = (vn[1:-1, 1:-1] -
+                         un[1:-1, 1:-1] * dt / dx * (vn[1:-1, 1:-1] - vn[1:-1, 0:-2]) -
+                         vn[1:-1, 1:-1] * dt / dy * (vn[1:-1, 1:-1] - vn[0:-2, 1:-1]) -
+                         dt / (2 * rho * dy) * (p[2:, 1:-1] - p[0:-2, 1:-1]) +
+                         nu * (dt / dx**2 * (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+                               dt / dy**2 * (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+        
+        # Condições de contorno para velocidade (paredes sem escorregamento)
+        u[0, :] = 0
+        u[-1, :] = 0
+        u[:, 0] = 0
+        u[:, -1] = 0
+        v[0, :] = 0
+        v[-1, :] = 0
+        v[:, 0] = 0
+        v[:, -1] = 0
