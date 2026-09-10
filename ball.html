@@ -28,7 +28,98 @@
     </style>
 </head>
 <body>
+
     <canvas id="meuCanvas"></canvas>
-    
+
+    <script>
+        const canvas = document.getElementById('meuCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Define o tamanho da área de animação
+        canvas.width = 600;
+        canvas.height = 400;
+
+        // Propriedades da bola
+        const bola = {
+            x: canvas.width / 2,     // Posição X inicial (centro)
+            y: 50,                   // Posição Y inicial (no alto)
+            raio: 25,                // Tamanho da bola
+            cor: '#8A2BE2',          // Cor roxa (BlueViolet)
+            vx: 3,                   // Velocidade horizontal
+            vy: 0,                   // Velocidade vertical inicial
+            gravidade: 0.4,          // Força da gravidade
+            quique: 0.8,             // Quanto da velocidade é mantida ao quicar (0.8 = 80%)
+            atrito: 0.99              // Perda de velocidade horizontal gradual
+        };
+
+        // Função para desenhar a bola na tela
+        function desenharBola() {
+            ctx.beginPath();
+            ctx.arc(bola.x, bola.y, bola.raio, 0, Math.PI * 2);
+            ctx.fillStyle = bola.cor;
+            ctx.fill();
+            
+            // Adiciona um brilho/sombra simples para dar efeito 3D
+            ctx.strokeStyle = '#4B0082';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        // Função para atualizar a física da bola a cada quadro (frame)
+        function atualizar() {
+            // Aplica a gravidade
+            bola.vy += bola.gravidade;
+
+            // Atualiza as posições
+            bola.x += bola.vx;
+            bola.y += bola.vy;
+
+            // Colisão com o chão
+            if (bola.y + bola.raio > canvas.height) {
+                bola.y = canvas.height - bola.raio; // Ajusta a posição para não ultrapassar a borda
+                bola.vy *= -bola.quique;           // Inverte a velocidade e aplica a perda de energia
+            }
+
+            // Colisão com o teto
+            if (bola.y - bola.raio < 0) {
+                bola.y = bola.raio;
+                bola.vy *= -bola.quique;
+            }
+
+            // Colisão com a parede direita
+            if (bola.x + bola.raio > canvas.width) {
+                bola.x = canvas.width - bola.raio;
+                bola.vx *= -1;
+            }
+
+            // Colisão com a parede esquerda
+            if (bola.x - bola.raio < 0) {
+                bola.x = bola.raio;
+                bola.vx *= -1;
+            }
+
+            // Desacelera a bola suavemente na horizontal se ela estiver quicando baixo
+            if (bola.y + bola.raio >= canvas.height) {
+                bola.vx *= bola.atrito;
+            }
+        }
+
+        // Loop de animação contínuo
+        function animar() {
+            // Limpa a tela a cada quadro
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Desenha e atualiza
+            desenharBola();
+            atualizar();
+
+            // Chama o próximo quadro
+            requestAnimationFrame(animar);
+        }
+
+        // Inicia a animação
+        animar();
+    </script>
 </body>
 </html>
