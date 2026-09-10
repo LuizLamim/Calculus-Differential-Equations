@@ -30,3 +30,14 @@ def simular_navier_stokes():
     r_sq = (X - 1.0)**2 + (Y - 1.0)**2
     u = -np.sin(np.pi * (Y - 1.0)) * np.exp(-r_sq * 5)
     v =  np.sin(np.pi * (X - 1.0)) * np.exp(-r_sq * 5)
+
+    # 2. Resolução do Termo Fonte da Pressão
+    def construir_termo_b(b, rho, dt, u, v, dx, dy):
+        b[1:-1, 1:-1] = (rho * (1 / dt * 
+                        ((u[1:-1, 2:] - u[1:-1, 0:-2]) / (2 * dx) + 
+                         (v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy)) -
+                        ((u[1:-1, 2:] - u[1:-1, 0:-2]) / (2 * dx))**2 -
+                        2 * ((u[2:, 1:-1] - u[0:-2, 1:-1]) / (2 * dy) *
+                             (v[1:-1, 2:] - v[1:-1, 0:-2]) / (2 * dx)) -
+                        ((v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy))**2))
+        return b
