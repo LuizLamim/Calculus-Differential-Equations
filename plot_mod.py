@@ -22,3 +22,16 @@ xtick_labels = [
     '0', r'$\frac{\pi}{2}$', r'$\pi$', r'$\frac{3\pi}{2}$', r'$2\pi$'
 ]
 plt.xticks(xticks, xtick_labels)
+
+# Estilização do gráfico
+plt.title('Gráfico de $|\cos(x)|$ e $|\sin(x)|$', fontsize=14)
+plt.xlabel('x', fontsize=12)
+plt.ylabel('y', fontsize=12)
+plt.ylim(-0.1, 1.2)
+plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+plt.axvline(0, color='black', linewidth=0.8, linestyle='--')
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.legend(fontsize=12, loc='upper right')
+
+plt.tight_layout()
+plt.show()
