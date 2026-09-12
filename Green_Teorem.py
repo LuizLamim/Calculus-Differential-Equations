@@ -36,3 +36,24 @@ def demonstrar_teorema_green():
     # LADO ESQUERDO: Integral de Linha (4 segmentos)
     # ==========================================
     # O quadrado tem 4 lados (C1, C2, C3, C4) percorridos no sentido anti-horário.
+
+    # C1: y = 0, dy = 0, x varia de 0 a 1
+    int_c1 = sp.integrate(L.subs(y, 0), (x, 0, 1))
+    
+    # C2: x = 1, dx = 0, y varia de 0 a 1
+    int_c2 = sp.integrate(M.subs(x, 1), (y, 0, 1))
+    
+    # C3: y = 1, dy = 0, x varia de 1 a 0 (sentido inverso)
+    int_c3 = sp.integrate(L.subs(y, 1), (x, 1, 0))
+    
+    # C4: x = 0, dx = 0, y varia de 1 a 0 (sentido inverso)
+    int_c4 = sp.integrate(M.subs(x, 0), (y, 1, 0))
+    
+    integral_linha = int_c1 + int_c2 + int_c3 + int_c4
+    
+    print("2. Calculando a Integral de Linha ∮ (L dx + M dy):")
+    print(f"   Segmento C1 (y=0, x de 0 a 1): {int_c1}")
+    print(f"   Segmento C2 (x=1, y de 0 a 1): {int_c2}")
+    print(f"   Segmento C3 (y=1, x de 1 a 0): {int_c3}")
+    print(f"   Segmento C4 (x=0, y de 1 a 0): {int_c4}")
+    print(f"   Resultado da Integral de Linha = {integral_linha}\n")
