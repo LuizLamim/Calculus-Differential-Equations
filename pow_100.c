@@ -10,7 +10,7 @@ int main() {
         return 1;
     }
 
-    // Calcula base^200
+    // Calcula base^300
     resultado = pow(base, 200);
 
     // Exibe em notacao cientifica e decimal padrao
