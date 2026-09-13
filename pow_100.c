@@ -11,7 +11,7 @@ int main() {
     }
 
     // Calcula base^300
-    resultado = pow(base, 200);
+    resultado = pow(base, 300);
 
     // Exibe em notacao cientifica e decimal padrao
     printf("\nResultado de %.2lf elevado a 100:\n", base);
