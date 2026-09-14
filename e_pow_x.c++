@@ -2,4 +2,13 @@
 #include <cmath>
 #include <vector>
 
-int main() {}
+int main() {
+    // Configurações do gráfico
+    const int LARGURA = 60;   // Resolução horizontal
+    const int ALTURA = 20;    // Resolução vertical
+    
+    const double X_MIN = -2.0;
+    const double X_MAX = 2.5;
+    const double Y_MIN = 0.0;
+    const double Y_MAX = 12.0;
+}
