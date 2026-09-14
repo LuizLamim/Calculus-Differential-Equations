@@ -31,4 +31,26 @@ int main() {
                 std::abs(y) < (Y_MAX - Y_MIN) / (2 * ALTURA)) grade[i][j] = '+';
         }
     }
+
+    // 2. Plota os pontos da função e^x
+    for (int j = 0; j < LARGURA; ++j) {
+        double x = X_MIN + j * (X_MAX - X_MIN) / (LARGURA - 1);
+        double y = std::exp(x);
+
+        // Verifica se o valor de y cabe dentro dos limites do gráfico
+        if (y >= Y_MIN && y <= Y_MAX) {
+            int i = static_cast<int>((Y_MAX - y) * (ALTURA - 1) / (Y_MAX - Y_MIN));
+            if (i >= 0 && i < ALTURA) {
+                grade[i][j] = '*';
+            }
+        }
+    }
+
+    // 3. Imprime o gráfico no terminal
+    std::cout << "--- Gráfico de f(x) = e^x ---\n\n";
+    for (int i = 0; i < ALTURA; ++i) {
+        std::cout << grade[i] << "\n";
+    }
+
+    return 0;
 }
