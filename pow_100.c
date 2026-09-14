@@ -10,11 +10,11 @@ int main() {
         return 1;
     }
 
-    // Calcula base^100
-    resultado = pow(base, 100);
+    // Calcula base^300
+    resultado = pow(base, 300);
 
     // Exibe em notacao cientifica e decimal padrao
-    printf("\nResultado de %.2lf elevado a 100:\n", base);
+    printf("\nResultado de %.2lf elevado a 300:\n", base);
     printf("Notacao Cientifica: %e\n", resultado);
     printf("Notacao Decimal:    %.2f\n", resultado);
 
