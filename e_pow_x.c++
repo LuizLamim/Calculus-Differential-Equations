@@ -11,4 +11,7 @@ int main() {
     const double X_MAX = 2.5;
     const double Y_MIN = 0.0;
     const double Y_MAX = 12.0;
+
+    // Cria a matriz preenchida com espaços em branco
+    std::vector<std::string> grade(ALTURA, std::string(LARGURA, ' '));
 }
