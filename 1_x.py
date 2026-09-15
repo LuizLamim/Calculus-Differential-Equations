@@ -11,3 +11,7 @@ y_pos = 1 / x_pos
 
 # Configura a figura
 plt.figure(figsize=(8, 6))
+
+# Plota as duas curvas
+plt.plot(x_neg, y_neg, color='blue', linewidth=2, label=r'$f(x) = \frac{1}{x}$')
+plt.plot(x_pos, y_pos, color='blue', linewidth=2)
