@@ -30,3 +30,6 @@ plt.xlabel('x', fontsize=12)
 plt.ylabel('y', fontsize=12)
 plt.grid(True, linestyle=':', alpha=0.6)
 plt.legend(fontsize=12)
+
+# Exibe o gráfico
+plt.show()
