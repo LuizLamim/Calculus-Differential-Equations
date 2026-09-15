@@ -8,3 +8,6 @@ x_pos = np.linspace(0.1, 10, 500)
 # Calcula os valores correspondentes de y
 y_neg = 1 / x_neg
 y_pos = 1 / x_pos
+
+# Configura a figura
+plt.figure(figsize=(8, 6))
