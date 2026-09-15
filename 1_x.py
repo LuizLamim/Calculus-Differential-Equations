@@ -15,3 +15,7 @@ plt.figure(figsize=(8, 6))
 # Plota as duas curvas
 plt.plot(x_neg, y_neg, color='blue', linewidth=2, label=r'$f(x) = \frac{1}{x}$')
 plt.plot(x_pos, y_pos, color='blue', linewidth=2)
+
+# Adiciona as assíntotas (eixos x = 0 e y = 0)
+plt.axhline(0, color='black', linestyle='--', alpha=0.7)
+plt.axvline(0, color='black', linestyle='--', alpha=0.7)
