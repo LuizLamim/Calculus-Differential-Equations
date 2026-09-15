@@ -19,3 +19,7 @@ plt.plot(x_pos, y_pos, color='blue', linewidth=2)
 # Adiciona as assíntotas (eixos x = 0 e y = 0)
 plt.axhline(0, color='black', linestyle='--', alpha=0.7)
 plt.axvline(0, color='black', linestyle='--', alpha=0.7)
+
+# Define limites de exibição para melhor visualização
+plt.xlim(-10, 10)
+plt.ylim(-10, 10)
