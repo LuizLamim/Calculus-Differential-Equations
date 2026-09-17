@@ -8,3 +8,6 @@ numero2 = gets.chomp.to_f
 
 # Realiza a soma
 soma = numero1 + numero2
+
+# Exibe o resultado
+puts "A soma entre #{numero1} e #{numero2} é: #{soma}"
