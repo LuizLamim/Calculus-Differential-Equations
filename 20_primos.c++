@@ -10,3 +10,18 @@ bool ehPrimo(int n) {
     }
     return true;
 }
+
+// Função para gerar os N primeiros números primos
+std::vector<int> gerarPrimeirosPrimos(int quantidade) {
+    std::vector<int> primos;
+    int numero = 2;
+
+    while (primos.size() < quantidade) {
+        if (ehPrimo(numero)) {
+            primos.push_back(numero);
+        }
+        numero++;
+    }
+
+    return primos;
+}
