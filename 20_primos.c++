@@ -25,3 +25,5 @@ std::vector<int> gerarPrimeirosPrimos(int quantidade) {
 
     return primos;
 }
+
+int main() {}
