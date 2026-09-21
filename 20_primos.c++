@@ -26,4 +26,28 @@ std::vector<int> gerarPrimeirosPrimos(int quantidade) {
     return primos;
 }
 
-int main() {}
+int main() {
+    const int totalPrimos = 20;
+    std::vector<int> primos = gerarPrimeirosPrimos(totalPrimos);
+
+    std::cout << "========================================================\n";
+    std::cout << "        PLOT DOS 20 PRIMEIROS NUMEROS PRIMOS            \n";
+    std::cout << "========================================================\n\n";
+
+    // Plotagem gráfica simples via terminal (Gráfico de Barras)
+    for (size_t i = 0; i < primos.size(); ++i) {
+        // Exibe o índice e o valor do número primo
+        std::cout << "P" << std::setw(2) << std::setfill('0') << i + 1 
+                  << " (" << std::setw(2) << std::setfill(' ') << primos[i] << ") | ";
+
+        // Imprime barras de acordo com o valor do número primo
+        for (int j = 0; j < primos[i]; ++j) {
+            std::cout << "█";
+        }
+        std::cout << "\n";
+    }
+
+    std::cout << "========================================================\n";
+
+    return 0;
+}
