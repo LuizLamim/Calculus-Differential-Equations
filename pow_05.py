@@ -5,3 +5,4 @@ entrada = input("Digite um número: ")
 numero = float(entrada)
 
 # Eleva o número a 0.5
+resultado = numero ** 0.5
