@@ -8,3 +8,4 @@ resultado = primo ** math.pi
 
 # Exibindo o resultado formatado
 print(f"O número primo {primo} elevado a pi (π ≈ {math.pi:.5f}) é:")
+print(f"{resultado}")
