@@ -1,9 +1,9 @@
 import math
 
-# Definindo um número primo (ex: 17)
-primo = 17
+# Definindo um número primo (ex: 23)
+primo = 23
 
-# Calculando primo elevado a pi (17 ** pi)
+# Calculando primo elevado a pi (23 ** pi)
 resultado = primo ** math.pi
 
 # Exibindo o resultado formatado
