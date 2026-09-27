@@ -33,4 +33,6 @@ int main() {
         }
         numeroAtual++;
     }
+
+    return 0;
 }
