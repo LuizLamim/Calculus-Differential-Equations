@@ -23,4 +23,14 @@ int main() {
     int quantidadeDesejada = 17;
     int contador = 0;
     int numeroAtual = 2;
+
+    std::cout << "Os " << quantidadeDesejada << " primeiros numeros primos sao:\n";
+
+    while (contador < quantidadeDesejada) {
+        if (ehPrimo(numeroAtual)) {
+            contador++;
+            std::cout << contador << "º primo: " << numeroAtual << "\n";
+        }
+        numeroAtual++;
+    }
 }
