@@ -18,3 +18,9 @@ bool ehPrimo(int n) {
     
     return true;
 }
+
+int main() {
+    int quantidadeDesejada = 17;
+    int contador = 0;
+    int numeroAtual = 2;
+}
