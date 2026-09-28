@@ -28,3 +28,16 @@ def inserir_pessoa(nome, idade):
     conexao.commit()
     conexao.close()
     print(f"Sucesso! {nome}, de {idade} anos, foi cadastrado(a) no banco de dados.")
+
+def consultar_pessoas():
+    conexao = sqlite3.connect("pessoas.db")
+    cursor = conexao.cursor()
+    
+    cursor.execute("SELECT * FROM pessoas")
+    resultados = cursor.fetchall()
+    
+    print("\n--- Pessoas Cadastradas ---")
+    for linha in resultados:
+        print(f"ID: {linha[0]} | Nome: {linha[1]} | Idade: {linha[2]}")
+        
+    conexao.close()
