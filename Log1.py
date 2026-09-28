@@ -8,3 +8,6 @@ x = np.linspace(0.1, 10, 400)
 # Calcula as funções logarítmicas
 y_natural = np.log(x)   # Logaritmo natural (base e)
 y_base10 = np.log10(x)  # Logaritmo na base 10
+
+# Criação do gráfico
+plt.figure(figsize=(8, 5))
