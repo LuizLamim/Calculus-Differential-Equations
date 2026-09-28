@@ -41,3 +41,18 @@ def consultar_pessoas():
         print(f"ID: {linha[0]} | Nome: {linha[1]} | Idade: {linha[2]}")
         
     conexao.close()
+
+# Execução do programa
+if __name__ == "__main__":
+    # Garante que o banco e a tabela existem
+    criar_banco()
+    
+    # Recebe os dados do usuário
+    nome_input = input("Digite o nome: ")
+    idade_input = int(input("Digite a idade: "))
+    
+    # Insere no banco
+    inserir_pessoa(nome_input, idade_input)
+    
+    # Opcional: Mostra todos os registros salvos até agora
+    consultar_pessoas()
