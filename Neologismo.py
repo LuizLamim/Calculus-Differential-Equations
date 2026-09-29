@@ -10,3 +10,27 @@ def gerar_neologismo():
     # Monta a estrutura da palavra de forma aleatória
     inicio = random.choice(consoantes_inicio)
     vogal1 = random.choice(vogais)
+
+    # Decide se a palavra terá um som intermediário ou vai direto para o final
+    if random.random() > 0.4:
+        meio = random.choice(consoantes_meio)
+        vogal2 = random.choice(vogais)
+        fim = random.choice(terminacoes)
+        palavra = f"{inicio}{vogal1}{meio}{vogal2}{fim}"
+    else:
+        fim = random.choice(terminacoes)
+        palavra = f"{inicio}{vogal1}{fim}"
+        
+    return palavra.capitalize()
+
+def gerar_lote():
+    print("✨ Gerando 5 novos neologismos...")
+    print("-" * 30)
+    # Garante que não venham palavras repetidas no mesmo lote
+    palavras = set()
+    while len(palavras) < 5:
+        palavras.add(gerar_neologismo())
+        
+    for i, p in enumerate(palavras, 1):
+        print(f"{i}. {p}")
+    print("-" * 30)
