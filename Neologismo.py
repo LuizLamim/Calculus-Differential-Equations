@@ -10,7 +10,7 @@ def gerar_neologismo():
     # Monta a estrutura da palavra de forma aleatória
     inicio = random.choice(consoantes_inicio)
     vogal1 = random.choice(vogais)
-
+    
     # Decide se a palavra terá um som intermediário ou vai direto para o final
     if random.random() > 0.4:
         meio = random.choice(consoantes_meio)
@@ -34,3 +34,11 @@ def gerar_lote():
     for i, p in enumerate(palavras, 1):
         print(f"{i}. {p}")
     print("-" * 30)
+
+if __name__ == "__main__":
+    while True:
+        gerar_lote()
+        resposta = input("\nPressiona Enter para gerar mais 5 ou digite 'sair' para encerrar: ").strip().lower()
+        if resposta == 'sair':
+            print("Até logo!")
+            break
