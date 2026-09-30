@@ -18,3 +18,7 @@ def setup_axis(ax):
   ax.set_xlabel("Eixo X")
   ax.set_ylabel("Eixo Y")
   ax.set_zlabel("Eixo Z")
+
+  # Número de quadros da animação
+num_frames = 120
+angles = np.linspace(0, 2 * np.pi, num_frames)
