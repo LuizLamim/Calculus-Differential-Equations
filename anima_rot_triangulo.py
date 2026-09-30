@@ -9,3 +9,12 @@ ax = fig.add_subplot(111, projection="3d")
 # Parâmetros geométricos do cone
 R = 2.0  # Raio da base do cone
 H = 4.0  # Altura do cone
+
+# Configuração inicial dos limites do gráfico 3D
+def setup_axis(ax):
+  ax.set_xlim([-2.5, 2.5])
+  ax.set_ylim([-2.5, 2.5])
+  ax.set_zlim([0, 4.5])
+  ax.set_xlabel("Eixo X")
+  ax.set_ylabel("Eixo Y")
+  ax.set_zlabel("Eixo Z")
