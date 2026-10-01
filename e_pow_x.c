@@ -10,3 +10,12 @@ int main() {
     double y_min = 0.0;
     double y_max = exp(x_max); // e^3 ≈ 20.08
 }
+
+char grid[HEIGHT][WIDTH];
+    
+    // Inicializa a matriz do grid com espaços em branco
+    for (int i = 0; i < HEIGHT; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            grid[i][j] = ' ';
+        }
+    }
