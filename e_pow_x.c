@@ -3,3 +3,5 @@
 
 #define WIDTH 60   // Largura do gráfico (colunas)
 #define HEIGHT 20  // Altura do gráfico (linhas)
+
+int main() {}
