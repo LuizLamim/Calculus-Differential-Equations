@@ -1,3 +1,5 @@
 #include <stdio.h>
 
-int main() {}
+int main() {
+    FILE *gnuplot = popen("gnuplot -persistent", "w");
+}
