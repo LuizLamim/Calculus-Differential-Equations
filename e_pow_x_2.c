@@ -11,4 +11,7 @@ int main() {
     fprintf(gnuplot, "set xlabel 'Eixo X'\n");
     fprintf(gnuplot, "set ylabel 'Eixo Y'\n");
     fprintf(gnuplot, "plot exp(x) with lines title 'e^x'\n");
+    
+    pclose(gnuplot);
+    return 0;
 }
