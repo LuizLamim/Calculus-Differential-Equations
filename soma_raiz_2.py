@@ -17,3 +17,6 @@ def calcular_raiz_da_soma():
         # Exibe o resultado de forma clara
         print(f"\nA soma de {num1} + {num2} é: {soma}")
         print(f"A raiz quadrada de {soma} é: {resultado:.4f}")
+
+    except ValueError:
+        print("Erro: Por favor, digite apenas números válidos.")
