@@ -1,3 +1,4 @@
 main(){
-    
+    extrn printf;
+
 }
