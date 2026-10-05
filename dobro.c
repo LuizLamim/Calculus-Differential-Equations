@@ -5,3 +5,4 @@ int dobrar(int numero) {
     return numero * 2;
 
 int main() {
+    int num, resultado;}
