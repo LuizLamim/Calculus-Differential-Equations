@@ -2,3 +2,5 @@
 
 puts "Digite o primeiro número:"
 num1 = gets.chomp.to_f
+
+puts "Digite o segundo número:"
