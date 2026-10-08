@@ -6,3 +6,6 @@ def multiplicar(a, b)
 # Solicitando os números ao usuário
 print "Digite o primeiro número: "
 num1 = gets.chomp.to_f
+
+print "Digite o segundo número: "
+num2 = gets.chomp.to_f
