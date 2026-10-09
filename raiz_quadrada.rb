@@ -2,3 +2,5 @@
 
 puts "Digite um número para calcular a raiz quadrada:"
 entrada = gets.chomp.to_f
+
+if entrada >= 0
