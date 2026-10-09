@@ -6,3 +6,6 @@ dividendo = gets.chomp.to_f
 
 print "Digite o segundo número (divisor): "
 divisor = gets.chomp.to_f
+
+# Verifica se o divisor é zero para evitar erro
+if divisor == 0
