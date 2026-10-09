@@ -9,5 +9,8 @@ divisor = gets.chomp.to_f
 
 # Verifica se o divisor é zero para evitar erro
 if divisor == 0
-    puts "Erro: Não é possível realizar divisão por zero!"
+  puts "Erro: Não é possível realizar divisão por zero!"
 else
+  resultado = dividendo / divisor
+  puts "O resultado de #{dividendo} ÷ #{divisor} é: #{resultado}"
+end
