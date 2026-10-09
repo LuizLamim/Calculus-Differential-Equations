@@ -5,3 +5,4 @@ entrada = gets.chomp.to_f
 
 if entrada >= 0
     resultado = Math.sqrt(entrada)
+    puts "A raiz quadrada de #{entrada} é #{resultado}"
