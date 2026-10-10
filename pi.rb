@@ -2,7 +2,7 @@
 require 'bigdecimal'
 require 'bigdecimal/math'
 
-# Defini a precisão para 21 dígitos significativos:
+# Definimos a precisão para 21 dígitos significativos:
 # 1 dígito antes da vírgula (3) + 20 casas decimais.
 precisao = 21
 
@@ -11,3 +11,4 @@ pi_com_precisao = BigMath.PI(precisao)
 
 # Exibe o resultado formatado em ponto fixo
 puts "Valor de Pi com 20 casas decimais:"
+puts pi_com_precisao.to_s('F')
