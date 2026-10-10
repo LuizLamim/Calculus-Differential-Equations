@@ -5,3 +5,6 @@ require 'bigdecimal/math'
 # Defini a precisão para 21 dígitos significativos:
 # 1 dígito antes da vírgula (3) + 20 casas decimais.
 precisao = 21
+
+# Calcula o Pi com a precisão desejada
+pi_com_precisao = BigMath.PI(precisao)
