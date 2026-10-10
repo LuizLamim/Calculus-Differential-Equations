@@ -8,3 +8,6 @@ precisao = 21
 
 # Calcula o Pi com a precisão desejada
 pi_com_precisao = BigMath.PI(precisao)
+
+# Exibe o resultado formatado em ponto fixo
+puts "Valor de Pi com 20 casas decimais:"
