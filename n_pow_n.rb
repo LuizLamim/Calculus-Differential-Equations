@@ -1,4 +1,5 @@
-#elevar
+# programa.rb
+
 puts "=== Calculadora de Potenciação ==="
 print "Digite o número base: "
 base = gets.chomp.to_f
@@ -8,3 +9,6 @@ expoente = gets.chomp.to_f
 
 # O operador ** é a forma nativa do Ruby para exponenciação
 resultado = base ** expoente
+
+puts "\nResultado:"
+puts "#{base} elevado a #{expoente} é igual a #{resultado}"
