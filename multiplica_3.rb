@@ -9,3 +9,5 @@ num2 = gets.chomp.to_f
 
 puts "Digite o terceiro número:"
 num3 = gets.chomp.to_f
+
+resultado = num1 * num2 * num3
