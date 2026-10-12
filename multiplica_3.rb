@@ -6,3 +6,6 @@ num1 = gets.chomp.to_f
 
 puts "Digite o segundo número:"
 num2 = gets.chomp.to_f
+
+puts "Digite o terceiro número:"
+num3 = gets.chomp.to_f
