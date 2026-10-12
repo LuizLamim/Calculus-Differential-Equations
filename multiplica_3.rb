@@ -11,3 +11,5 @@ puts "Digite o terceiro número:"
 num3 = gets.chomp.to_f
 
 resultado = num1 * num2 * num3
+
+puts "O resultado da multiplicação é: #{resultado}"
