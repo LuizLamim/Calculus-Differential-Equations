@@ -10,3 +10,6 @@ num_frames = 150
 np.random.seed(42)
 r = np.random.uniform(1.0, 10.0, num_galaxies)
 theta = np.random.uniform(0, 2 * np.pi, num_galaxies)
+
+x0 = r * np.cos(theta)
+y0 = r * np.sin(theta)
