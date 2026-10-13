@@ -13,3 +13,8 @@ theta = np.random.uniform(0, 2 * np.pi, num_galaxies)
 
 x0 = r * np.cos(theta)
 y0 = r * np.sin(theta)
+
+# Configuração da figura e dos eixos (fundo preto simulando o espaço profundo)
+fig, ax = plt.subplots(figsize=(8, 8))
+ax.set_facecolor('black')
+fig.patch.set_facecolor('black')
