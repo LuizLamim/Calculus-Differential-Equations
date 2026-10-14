@@ -20,3 +20,6 @@ plt.tick_params(length=0) # Esconde os traços dos eixos
 for i in range(3):
     for j in range(3):
         plt.text(j, i, '0', ha='center', va='center', fontsize=20, color='black')
+
+plt.title('Matriz 3x3 de Zeros', fontsize=14, pad=12)
+plt.show()
