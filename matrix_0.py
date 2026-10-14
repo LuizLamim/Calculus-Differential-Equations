@@ -15,3 +15,8 @@ plt.grid(True, color='gray', linestyle='-', linewidth=1.5)
 plt.xticks(np.arange(-0.5, 3, 1), labels=['', '', '', ''])
 plt.yticks(np.arange(-0.5, 3, 1), labels=['', '', '', ''])
 plt.tick_params(length=0) # Esconde os traços dos eixos
+
+# 5. Adiciona o texto '0' em cada célula da matriz
+for i in range(3):
+    for j in range(3):
+        plt.text(j, i, '0', ha='center', va='center', fontsize=20, color='black')
