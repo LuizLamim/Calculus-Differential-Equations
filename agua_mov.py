@@ -54,7 +54,7 @@ class Particula:
         pygame.draw.circle(tela, cor, (int(self.x), int(self.y)), RAIO_PARTICULA)
 
 
-    def resolver_interacoes(particulas):
+def resolver_interacoes(particulas):
     """Calcula a repulsão entre partículas para simular a viscosidade e pressão do fluido."""
     for i in range(len(particulas)):
         p1 = particulas[i]
@@ -79,3 +79,60 @@ class Particula:
                 p1.vy -= ny * forca
                 p2.vx += nx * forca
                 p2.vy += ny * forca
+
+
+def main():
+    pygame.init()
+    tela = pygame.display.set_mode((LARGURA, ALTURA))
+    pygame.display.set_caption("Simulação de Fluido / Água em Python")
+    relogio = pygame.time.Clock()
+
+    # Cria partículas concentradas no centro superior para formar uma "cascata"
+    particulas = [
+        Particula(
+            random.uniform(LARGURA // 3, 2 * LARGURA // 3),
+            random.uniform(50, 200)
+        )
+        for _ in range(NUM_PARTICULAS)
+    ]
+
+    rodando = True
+    pressionando_mouse = False
+
+    while rodando:
+        relogio.tick(FPS)
+        tela.fill((15, 20, 30))  # Fundo escuro para contrastar com a água
+
+        # Processamento de Eventos
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                rodando = False
+            elif evento.type == pygame.MOUSEBUTTONDOWN:
+                if evento.button == 1:  # Botão esquerdo do mouse
+                    pressionando_mouse = True
+            elif evento.type == pygame.MOUSEBUTTONUP:
+                if evento.button == 1:
+                    pressionando_mouse = False
+
+        # Adiciona novas partículas ao clicar e arrastar o mouse
+        if pressionando_mouse:
+            mx, my = pygame.mouse.get_pos()
+            particulas.append(Particula(mx + random.uniform(-5, 5), my + random.uniform(-5, 5)))
+
+        # Atualização física
+        resolver_interacoes(particulas)
+        for p in particulas:
+            p.atualizar()
+            p.desenhar(tela)
+
+        # Informações na tela
+        fonte = pygame.font.SysFont("Arial", 16)
+        texto = fonte.render(f"Partículas: {len(particulas)} | Clique com o mouse para adicionar água", True, (200, 200, 200))
+        tela.blit(texto, (10, 10))
+
+        pygame.display.flip()
+
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
