@@ -52,3 +52,30 @@ class Particula:
         cor = (30, 144, azul)
         
         pygame.draw.circle(tela, cor, (int(self.x), int(self.y)), RAIO_PARTICULA)
+
+
+    def resolver_interacoes(particulas):
+    """Calcula a repulsão entre partículas para simular a viscosidade e pressão do fluido."""
+    for i in range(len(particulas)):
+        p1 = particulas[i]
+        for j in range(i + 1, len(particulas)):
+            p2 = particulas[j]
+
+            dx = p2.x - p1.x
+            dy = p2.y - p1.y
+            distancia = math.hypot(dx, dy)
+
+            # Se estiverem mais próximas que o raio de interação, empurram-se
+            if 0 < distancia < RAIO_INTERACAO:
+                # Normalização do vetor
+                nx = dx / distancia
+                ny = dy / distancia
+
+                # Força proporcional à proximidade (quanto mais perto, mais forte)
+                forca = (RAIO_INTERACAO - distancia) / RAIO_INTERACAO * FORCA_REPULSAO
+
+                # Aplica as forças opostas
+                p1.vx -= nx * forca
+                p1.vy -= ny * forca
+                p2.vx += nx * forca
+                p2.vy += ny * forca
