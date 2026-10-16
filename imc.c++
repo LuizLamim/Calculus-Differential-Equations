@@ -1,4 +1,6 @@
 #include <iostream>
 #include <iomanip>
 
-int main() {}
+int main() {
+    double peso, altura, imc;
+}
