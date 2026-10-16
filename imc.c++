@@ -28,4 +28,21 @@ int main() {
     // Exibição do resultado
     std::cout << "\nSeu IMC e: " << imc << std::endl;
     std::cout << "Classificacao: ";
+
+    // Tabela de classificação da OMS
+    if (imc < 18.5) {
+        std::cout << "Abaixo do peso" << std::endl;
+    } else if (imc >= 18.5 && imc < 25.0) {
+        std::cout << "Peso normal" << std::endl;
+    } else if (imc >= 25.0 && imc < 30.0) {
+        std::cout << "Sobrepeso" << std::endl;
+    } else if (imc >= 30.0 && imc < 35.0) {
+        std::cout << "Obesidade Grau I" << std::endl;
+    } else if (imc >= 35.0 && imc < 40.0) {
+        std::cout << "Obesidade Grau II" << std::endl;
+    } else {
+        std::cout << "Obesidade Grau III (morbida)" << std::endl;
+    }
+
+    return 0;
 }
