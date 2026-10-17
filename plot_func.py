@@ -7,3 +7,7 @@ x = np.linspace(-15, 6, 400)
 
 # 2. Definir a função Y = 4x^2 + 35x
 y = 4 * x**2 + 35 * x
+
+# 3. Criar a figura e o gráfico
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label=r"$f(x) = 4x^2 + 35x$", color="blue", linewidth=2)
