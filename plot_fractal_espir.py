@@ -22,3 +22,16 @@ def gerar_espiral_fractal(num_pontos=100000):
         # Ramificação interna 2
         [0.40 * np.cos(-1.2),  -0.40 * np.sin(-1.2),  0.40 * np.sin(-1.2),  0.40 * np.cos(-1.2),  0.0, 0.5, 0.05]
     ]
+
+    probabilidades = [t[6] for t in transformacoes]
+    
+    # Sorteia qual transformação aplicar a cada passo
+    escolhas = np.random.choice(len(transformacoes), size=num_pontos, p=probabilidades)
+
+    # Iteração para gerar os pontos
+    for i in range(1, num_pontos):
+        t = transformacoes[escolhas[i]]
+        x[i] = t[0] * x[i-1] + t[1] * y[i-1] + t[4]
+        y[i] = t[2] * x[i-1] + t[3] * y[i-1] + t[5]
+
+    return x, y
