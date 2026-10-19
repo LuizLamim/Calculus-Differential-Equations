@@ -35,3 +35,25 @@ def gerar_espiral_fractal(num_pontos=100000):
         y[i] = t[2] * x[i-1] + t[3] * y[i-1] + t[5]
 
     return x, y
+
+def plotar_fractal():
+    x, y = gerar_espiral_fractal(num_pontos=200000)
+
+    # Configuração da figura
+    plt.figure(figsize=(10, 10), facecolor='black')
+    ax = plt.subplot(111, facecolor='black')
+
+    # Plotando os pontos com mapa de cores dinâmico baseado na distância do centro
+    raio = np.sqrt(x**2 + y**2)
+    plt.scatter(x, y, s=0.1, c=raio, cmap='magma', alpha=0.6)
+
+    # Estilização
+    plt.title("Fractal em Espiral", color='white', fontsize=16, pad=15)
+    plt.axis('equal')
+    plt.axis('off')
+
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == "__main__":
+    plotar_fractal()
