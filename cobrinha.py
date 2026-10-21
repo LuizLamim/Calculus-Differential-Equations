@@ -25,3 +25,8 @@ def gerar_comida():
     x = random.randint(0, (LARGURA - TAMANHO_BLOCO) // TAMANHO_BLOCO) * TAMANHO_BLOCO
     y = random.randint(0, (ALTURA - TAMANHO_BLOCO) // TAMANHO_BLOCO) * TAMANHO_BLOCO
     return [x, y]
+
+def jogo():
+    # Posição inicial da cobrinha
+    cobra = [[200, 200], [180, 200], [160, 200]]
+    direcao = "DIREITA"
