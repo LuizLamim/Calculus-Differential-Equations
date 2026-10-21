@@ -20,3 +20,8 @@ BRANCO = (255, 255, 255)
 tela = pygame.display.set_mode((LARGURA, ALTURA))
 pygame.display.set_caption("Jogo da Cobrinha")
 relogio = pygame.time.Clock()
+
+def gerar_comida():
+    x = random.randint(0, (LARGURA - TAMANHO_BLOCO) // TAMANHO_BLOCO) * TAMANHO_BLOCO
+    y = random.randint(0, (ALTURA - TAMANHO_BLOCO) // TAMANHO_BLOCO) * TAMANHO_BLOCO
+    return [x, y]
