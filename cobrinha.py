@@ -1,3 +1,22 @@
 import sys
 import random
 import pygame
+
+# Inicialização do Pygame
+pygame.init()
+
+# Configurações da Tela
+LARGURA = 600
+ALTURA = 400
+TAMANHO_BLOCO = 20
+VELOCIDADE = 10
+
+# Cores (RGB)
+VERDE = (0, 255, 0)
+VERMELHO = (255, 0, 0)
+PRETO = (0, 0, 0)
+BRANCO = (255, 255, 255)
+
+tela = pygame.display.set_mode((LARGURA, ALTURA))
+pygame.display.set_caption("Jogo da Cobrinha")
+relogio = pygame.time.Clock()
