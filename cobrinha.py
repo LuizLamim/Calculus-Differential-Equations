@@ -30,3 +30,6 @@ def jogo():
     # Posição inicial da cobrinha
     cobra = [[200, 200], [180, 200], [160, 200]]
     direcao = "DIREITA"
+
+    comida = gerar_comida()
+    pontos = 0
