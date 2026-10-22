@@ -6,3 +6,5 @@ def calcular_aceleracao():
     print("1 - Metros por segundo (m/s)")
     print("2 - Quilômetros por hora (km/h)")
     opcao = input("Opção (1 ou 2): ").strip()
+
+    try:
