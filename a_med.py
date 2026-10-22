@@ -8,3 +8,5 @@ def calcular_aceleracao():
     opcao = input("Opção (1 ou 2): ").strip()
 
     try:
+
+    except
