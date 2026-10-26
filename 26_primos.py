@@ -19,3 +19,8 @@ def obter_primeiros_primos(qtd):
             primos.append(numero)
         numero += 1
     return primos
+
+# 1. Obter os 26 primeiros números primos
+quantidade = 26
+primos = obter_primeiros_primos(quantidade)
+posicoes = list(range(1, quantidade + 1))  # Índice de 1 a 26
