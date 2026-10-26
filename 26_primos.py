@@ -36,3 +36,14 @@ plt.plot(
     linewidth=1.5,
     markersize=6,
 )
+
+# Adicionar o valor exato acima de cada ponto no gráfico
+for i, valor in enumerate(primos):
+    plt.text(
+        posicoes[i],
+        valor + 1,
+        str(valor),
+        ha="center",
+        va="bottom",
+        fontsize=8,
+    )
