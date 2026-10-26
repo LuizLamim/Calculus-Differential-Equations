@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def eh_primo(n):
     """Verifica se um número n é primo."""
     if n < 2:
@@ -19,6 +20,7 @@ def obter_primeiros_primos(qtd):
             primos.append(numero)
         numero += 1
     return primos
+
 
 # 1. Obter os 26 primeiros números primos
 quantidade = 26
@@ -47,3 +49,15 @@ for i, valor in enumerate(primos):
         va="bottom",
         fontsize=8,
     )
+
+# Títulos e rótulos
+plt.title(
+    f"Os {quantidade} Primeiros Números Primos", fontsize=14, fontweight="bold"
+)
+plt.xlabel("Ordem / Posição (n-ésimo primo)", fontsize=11)
+plt.ylabel("Valor do Número Primo", fontsize=11)
+plt.grid(True, linestyle="--", alpha=0.6)
+plt.xticks(posicoes)  # Mostra todas as posições de 1 a 26 no eixo X
+
+# Exibir a figura
+plt.show()
