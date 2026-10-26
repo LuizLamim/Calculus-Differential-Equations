@@ -24,3 +24,15 @@ def obter_primeiros_primos(qtd):
 quantidade = 26
 primos = obter_primeiros_primos(quantidade)
 posicoes = list(range(1, quantidade + 1))  # Índice de 1 a 26
+
+# 2. Configurar e exibir o gráfico
+plt.figure(figsize=(10, 6))
+plt.plot(
+    posicoes,
+    primos,
+    marker="o",
+    color="b",
+    linestyle="-",
+    linewidth=1.5,
+    markersize=6,
+)
