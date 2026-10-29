@@ -10,3 +10,8 @@ y = np.abs(x) + 3
 # Cria o gráfico
 plt.figure(figsize=(8, 6))
 plt.plot(x, y, label='f(x) = |x| + 3', color='blue', linewidth=2)
+
+# Adiciona título e rótulos aos eixos
+plt.title('Gráfico da função f(x) = |x| + 3')
+plt.xlabel('Eixo x')
+plt.ylabel('Eixo y')
