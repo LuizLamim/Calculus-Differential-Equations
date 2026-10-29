@@ -6,3 +6,7 @@ x = np.linspace(-10, 10, 400)
 
 # Define a função y = |x| + 3
 y = np.abs(x) + 3
+
+# Cria o gráfico
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='f(x) = |x| + 3', color='blue', linewidth=2)
