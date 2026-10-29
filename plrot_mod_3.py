@@ -15,3 +15,16 @@ plt.plot(x, y, label='f(x) = |x| + 3', color='blue', linewidth=2)
 plt.title('Gráfico da função f(x) = |x| + 3')
 plt.xlabel('Eixo x')
 plt.ylabel('Eixo y')
+
+# Adiciona uma grade para facilitar a visualização
+plt.grid(True, linestyle='--', alpha=0.7)
+
+# Destaca os eixos x e y em preto
+plt.axhline(0, color='black', linewidth=1)
+plt.axvline(0, color='black', linewidth=1)
+
+# Mostra a legenda
+plt.legend()
+
+# Exibe o gráfico
+plt.show()
