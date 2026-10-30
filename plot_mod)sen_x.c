@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main() {
     // Configurações do gráfico
     int resolucao_y = 50;         // Largura máxima (colunas) para y = 1
     int passos_x = 40;            // Quantidade de linhas (pontos no eixo X)
     double limite_x = 4 * M_PI;   // Plotar de 0 a 4π (dois ciclos completos)
-}
 
-// Cabeçalho
+    // Cabeçalho
     printf("Eixo X | Grafico de f(x) = |sen(x)|\n");
     printf("-------+---------------------------------------------------\n");
 
@@ -32,3 +31,7 @@ int main(){
         
         // Imprime o ponto
         printf("*\n");
+    }
+
+    return 0;
+}
