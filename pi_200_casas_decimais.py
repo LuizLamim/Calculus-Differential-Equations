@@ -18,3 +18,9 @@ def calcular_pi(casas_decimais):
         t -= p * (a - a_next) ** 2
         a = a_next
         p *= 2
+
+    pi = ((a + b) ** 2) / (Decimal(4) * t)
+
+    # Ajusta a precisão final para o valor exato desejado (200 casas decimais + o '3')
+    getcontext().prec = casas_decimais + 1
+    return +pi # O operador '+' aplica a precisão final ao número
