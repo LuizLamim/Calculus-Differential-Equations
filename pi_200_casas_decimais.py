@@ -10,3 +10,11 @@ def calcular_pi(casas_decimais):
     b = Decimal(1) / Decimal(2).sqrt()
     t = Decimal(1) / Decimal(4)
     p = Decimal(1)
+
+    # 10 iterações são mais que suficientes para gerar milhares de casas decimais
+    for _ in range(10):
+        a_next = (a + b) / Decimal(2)
+        b = (a * b).sqrt()
+        t -= p * (a - a_next) ** 2
+        a = a_next
+        p *= 2
