@@ -2,4 +2,6 @@
 
 int main(){
     float numero, resultado;
+
+    return 0;
 }
