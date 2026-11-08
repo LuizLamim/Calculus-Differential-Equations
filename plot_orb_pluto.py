@@ -12,3 +12,6 @@ Omega_deg = 110.3 # Longitude do nó ascendente em graus
 i = np.radians(i_deg)
 omega = np.radians(omega_deg)
 Omega = np.radians(Omega_deg)
+
+# Anomalia excêntrica (E) gerando 1000 pontos de 0 a 2*pi
+E = np.linspace(0, 2 * np.pi, 1000)
