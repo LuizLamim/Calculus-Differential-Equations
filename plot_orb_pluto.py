@@ -7,3 +7,8 @@ e = 0.2488      # Excentricidade
 i_deg = 17.16   # Inclinação em graus
 omega_deg = 113.8 # Argumento do periélio em graus
 Omega_deg = 110.3 # Longitude do nó ascendente em graus
+
+# Convertendo graus para radianos
+i = np.radians(i_deg)
+omega = np.radians(omega_deg)
+Omega = np.radians(Omega_deg)
