@@ -6,8 +6,9 @@ def calcular_velocidade_media(distancia, tempo):
     velocidade = distancia / tempo
     return velocidade
 
-    try:
-        distancia = float(input("Digite a distância percorrida (ex: km ou metros): "))
+# Solicita os dados ao usuário
+try:
+    distancia = float(input("Digite a distância percorrida (ex: km ou metros): "))
     tempo = float(input("Digite o tempo gasto (ex: horas ou segundos): "))
     
     resultado = calcular_velocidade_media(distancia, tempo)
@@ -16,5 +17,6 @@ def calcular_velocidade_media(distancia, tempo):
         print(resultado)
     else:
         print(f"\nA velocidade média é de {resultado:.2f}")
-
-    except ValueError:
+        
+except ValueError:
+    print("Erro: Por favor, digite apenas números válidos.")
