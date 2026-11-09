@@ -1,0 +1,1 @@
+def calcular_aceleracao_media(v_inicial, v_final, t_inicial, t_final):
