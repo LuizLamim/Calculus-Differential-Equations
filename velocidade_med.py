@@ -1,0 +1,1 @@
+def calcular_velocidade_media(distancia, tempo):
