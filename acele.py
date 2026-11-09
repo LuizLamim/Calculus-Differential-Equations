@@ -6,3 +6,5 @@ def calcular_aceleracao_media(v_inicial, v_final, t_inicial, t_final):
         raise ValueError("O intervalo de tempo (delta t) não pode ser zero.")
         
     return delta_v / delta_t
+
+if __name__ == "__main__":
