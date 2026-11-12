@@ -13,3 +13,6 @@ v = np.linspace(0, np.pi, 100)     # theta (de 0 a pi)
 x = np.outer(np.cos(u), np.sin(v))
 y = np.outer(np.sin(u), np.sin(v))
 z = np.outer(np.ones(np.size(u)), np.cos(v))
+
+# Renderização da superfície da esfera
+ax.plot_surface(x, y, z, color='c', alpha=0.8, edgecolor='black', linewidth=0.1)
