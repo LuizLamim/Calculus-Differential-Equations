@@ -24,3 +24,5 @@ def multiply_first_n_primes(n):
 # Calculando para os 5 primeiros números primos
 quantidade = 5
 primos_encontrados, resultado_multiplicacao = multiply_first_n_primes(quantidade)
+
+print(f"Os {quantidade} primeiros números primos são: {primos_encontrados}")
