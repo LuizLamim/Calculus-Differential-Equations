@@ -26,3 +26,4 @@ quantidade = 5
 primos_encontrados, resultado_multiplicacao = multiply_first_n_primes(quantidade)
 
 print(f"Os {quantidade} primeiros números primos são: {primos_encontrados}")
+print(f"O resultado da multiplicação é: {resultado_multiplicacao}")
