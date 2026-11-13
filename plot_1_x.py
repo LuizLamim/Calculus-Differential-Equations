@@ -23,3 +23,10 @@ plt.axvline(0, color='black', linewidth=1.2) # Eixo Y
 # Limita os eixos para melhor visualização (foca na curva principal)
 plt.xlim(-5, 5)
 plt.ylim(-1, 20)
+
+# Estilização
+plt.title('Gráfico da Função f(x) = |1/x|', fontsize=14)
+plt.xlabel('Eixo X', fontsize=12)
+plt.ylabel('Eixo Y', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend(fontsize=12)
