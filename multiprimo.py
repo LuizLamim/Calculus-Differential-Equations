@@ -20,3 +20,7 @@ def multiply_first_n_primes(n):
         num += 1
         
     return primes, product
+
+# Calculando para os 5 primeiros números primos
+quantidade = 5
+primos_encontrados, resultado_multiplicacao = multiply_first_n_primes(quantidade)
