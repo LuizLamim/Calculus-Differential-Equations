@@ -30,3 +30,6 @@ plt.xlabel('Eixo X', fontsize=12)
 plt.ylabel('Eixo Y', fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.legend(fontsize=12)
+
+# Exibe o gráfico
+plt.show()
