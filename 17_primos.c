@@ -7,7 +7,7 @@ int main() {
     printf("Os 19 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 19 números primos
-    while (contadorPrimos < 18) {
+    while (contadorPrimos < 19) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
         // Testa se o númeroAtual é divisível por algum número entre 2 e a raiz dele (ou até a metade)
