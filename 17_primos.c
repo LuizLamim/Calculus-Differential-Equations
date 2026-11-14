@@ -4,7 +4,7 @@ int main() {
     int contadorPrimos = 0;
     int numeroAtual = 2;
 
-    printf("Os 17 primeiros numeros primos sao:\n");
+    printf("Os 19 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 19 números primos
     while (contadorPrimos < 18) {
