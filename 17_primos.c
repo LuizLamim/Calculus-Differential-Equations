@@ -6,7 +6,7 @@ int main() {
 
     printf("Os 20 primeiros numeros primos sao:\n");
 
-    // Continua o loop até encontrar 19 números primos
+    // Continua o loop até encontrar 20 números primos
     while (contadorPrimos < 19) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
