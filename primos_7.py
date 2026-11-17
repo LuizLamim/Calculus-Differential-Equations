@@ -6,3 +6,6 @@ def eh_primo(numero):
         if numero % i == 0:
             return False
     return True
+
+primos = []
+candidato = 2
