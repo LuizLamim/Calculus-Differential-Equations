@@ -7,6 +7,7 @@ def eh_primo(numero):
             return False
     return True
 
+
 primos = []
 candidato = 2
 
@@ -15,3 +16,5 @@ while len(primos) < 7:
     if eh_primo(candidato):
         primos.append(candidato)
     candidato += 1
+
+print("Os 7 primeiros números primos são:", primos)
