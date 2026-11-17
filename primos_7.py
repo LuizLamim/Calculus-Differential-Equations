@@ -9,3 +9,9 @@ def eh_primo(numero):
 
 primos = []
 candidato = 2
+
+# Continua procurando até encontrar 7 números primos
+while len(primos) < 7:
+    if eh_primo(candidato):
+        primos.append(candidato)
+    candidato += 1
