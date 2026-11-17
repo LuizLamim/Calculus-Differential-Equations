@@ -19,3 +19,17 @@ plt.axvline(0, color="black", linewidth=0.8)
 
 # Destaca o ponto de interseção com o eixo Y: (0, 1)
 plt.scatter([0], [1], color="red", zorder=5, label="Intercepto Y (0, 1)")
+
+# 4. Personalização visual
+plt.title("Gráfico da Função Exponencial Decrescente", fontsize=14, pad=12)
+plt.xlabel("x", fontsize=12)
+plt.ylabel("f(x)", fontsize=12)
+plt.grid(True, linestyle="--", alpha=0.6)
+plt.legend(fontsize=11)
+
+# Limita o eixo Y para evitar que o crescimento rápido para x < 0 achate o resto da curva
+plt.ylim(-0.5, 10)
+
+# 5. Exibe o gráfico
+plt.tight_layout()
+plt.show()
