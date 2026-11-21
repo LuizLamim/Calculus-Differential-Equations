@@ -7,7 +7,7 @@ int main() {
     printf("Os 22 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 21 números primos
-    while (contadorPrimos < 21) {
+    while (contadorPrimos < 22) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
         // Testa se o númeroAtual é divisível por algum número entre 2 e a raiz dele (ou até a metade)
