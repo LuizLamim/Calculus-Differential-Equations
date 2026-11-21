@@ -6,7 +6,7 @@ int main() {
 
     printf("Os 23 primeiros numeros primos sao:\n");
 
-    // Continua o loop até encontrar 22 números primos
+    // Continua o loop até encontrar 23 números primos
     while (contadorPrimos < 22) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
