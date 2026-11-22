@@ -7,7 +7,7 @@ int main() {
     printf("Os 25 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 25 números primos
-    while (contadorPrimos < 24) {
+    while (contadorPrimos < 25) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
         // Testa se o númeroAtual é divisível por algum número entre 2 e a raiz dele (ou até a metade)
