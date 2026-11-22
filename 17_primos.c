@@ -4,7 +4,7 @@ int main() {
     int contadorPrimos = 0;
     int numeroAtual = 2;
 
-    printf("Os 24 primeiros numeros primos sao:\n");
+    printf("Os 25 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 24 números primos
     while (contadorPrimos < 24) {
