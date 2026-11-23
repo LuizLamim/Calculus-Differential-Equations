@@ -4,7 +4,7 @@ int main() {
     int contadorPrimos = 0;
     int numeroAtual = 2;
 
-    printf("Os 100 primeiros numeros primos sao:\n");
+    printf("Os 1000 primeiros numeros primos sao:\n");
 
     // Continua o loop até encontrar 100 números primos
     while (contadorPrimos < 100) {
