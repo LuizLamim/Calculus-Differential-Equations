@@ -11,3 +11,7 @@ y = 5 ** (x + 2)
 # 3. Cria a figura e plota o gráfico
 plt.figure(figsize=(8, 6))
 plt.plot(x, y, label=r"$f(x) = 5^{x+2}$", color="blue", linewidth=2)
+
+# 4. Adiciona linhas dos eixos X e Y para referência
+plt.axhline(0, color="black", linewidth=0.8, linestyle="--")
+plt.axvline(0, color="black", linewidth=0.8, linestyle="--")
