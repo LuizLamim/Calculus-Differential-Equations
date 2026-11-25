@@ -4,10 +4,10 @@ int main() {
     int contadorPrimos = 0;
     int numeroAtual = 2;
 
-    printf("Os 21 primeiros numeros primos sao:\n");
+    printf("Os 1000 primeiros numeros primos sao:\n");
 
-    // Continua o loop até encontrar 21 números primos
-    while (contadorPrimos < 21) {
+    // Continua o loop até encontrar 1000 números primos
+    while (contadorPrimos < 1000) {
         int ehPrimo = 1; // Assume que o número é primo inicialmente
 
         // Testa se o númeroAtual é divisível por algum número entre 2 e a raiz dele (ou até a metade)
