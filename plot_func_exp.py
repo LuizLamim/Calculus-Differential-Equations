@@ -15,3 +15,13 @@ plt.plot(x, y, label=r"$f(x) = 5^{x+2}$", color="blue", linewidth=2)
 # 4. Adiciona linhas dos eixos X e Y para referência
 plt.axhline(0, color="black", linewidth=0.8, linestyle="--")
 plt.axvline(0, color="black", linewidth=0.8, linestyle="--")
+
+# 5. Configurações visuais (título, rótulos, grade e legenda)
+plt.title("Gráfico da Função Exponencial")
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.grid(True, which="both", linestyle=":", alpha=0.7)
+plt.legend(fontsize=12)
+
+# 6. Exibe o gráfico na tela
+plt.show()
