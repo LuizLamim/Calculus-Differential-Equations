@@ -9,3 +9,14 @@ def calcular_volume_semiesfera(raio: float) -> float:
     return volume
 
 def main():
+    try:
+        entrada = input("Digite o valor do raio da semiesfera: ").replace(
+            ",", "."
+        )
+        raio = float(entrada)
+
+        volume = calcular_volume_semiesfera(raio)
+        print(f"O volume da semiesfera é: {volume:.2f} unidades cúbicas")
+
+    except ValueError as erro:
+        print(f"Erro: {erro}")
