@@ -23,3 +23,11 @@ def calcular_juros_compostos():
         montante = montante * (1 + taxa_mensal) + aporte_mensal
         total_investido += aporte_mensal
         print(f"Mês {mes:02d}: R$ {montante:,.2f}")
+
+    total_juros = montante - total_investido
+
+    # Exibição dos resultados finais
+    print("\n=== Resumo Final ===")
+    print(f"Total investido: R$ {total_investido:,.2f}")
+    print(f"Total em juros:  R$ {total_juros:,.2f}")
+    print(f"Montante final:  R$ {montante:,.2f}")
