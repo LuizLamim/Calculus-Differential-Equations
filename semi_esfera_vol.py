@@ -7,3 +7,5 @@ def calcular_volume_semiesfera(raio: float) -> float:
 
     volume = (2 / 3) * math.pi * (raio**3)
     return volume
+
+def main():
