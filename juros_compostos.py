@@ -1,6 +1,6 @@
 def calcular_juros_compostos():
     print("=== Calculadora de Juros Compostos ===")
-
+    
     # Entrada de dados
     capital_inicial = float(input("Valor inicial (R$): "))
     aporte_mensal = float(input("Aporte mensal (R$) [digite 0 se não houver]: "))
@@ -31,3 +31,6 @@ def calcular_juros_compostos():
     print(f"Total investido: R$ {total_investido:,.2f}")
     print(f"Total em juros:  R$ {total_juros:,.2f}")
     print(f"Montante final:  R$ {montante:,.2f}")
+
+if __name__ == "__main__":
+    calcular_juros_compostos()
